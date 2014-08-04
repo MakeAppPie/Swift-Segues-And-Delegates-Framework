@@ -15,7 +15,7 @@ protocol FooTwoViewControllerDelegate{
 class FooTwoViewController: UIViewController {
     var delegate:FooTwoViewControllerDelegate? = nil
     var colorString:String = ""
-    @IBOutlet var colorLabel : UILabel
+    @IBOutlet var colorLabel : UILabel!
 
     @IBAction func saveColor(sender : UIBarButtonItem) {
         if delegate{
