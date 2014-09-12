@@ -18,8 +18,8 @@ class FooTwoViewController: UIViewController {
     @IBOutlet var colorLabel : UILabel!
 
     @IBAction func saveColor(sender : UIBarButtonItem) {
-        if delegate{
-            delegate!.myVCDidFinish(self, text: colorLabel.text)
+        if (delegate != nil) {
+            delegate!.myVCDidFinish(self, text: colorLabel!.text!)
         }
     }
 /* 
@@ -32,7 +32,7 @@ class FooTwoViewController: UIViewController {
     
 */
     @IBAction func colorSelectionButton(sender: UIButton) {
-         colorLabel.text = sender.titleLabel.text
+         colorLabel.text = sender.titleLabel!.text!
     }
     
     override func viewDidLoad() {
